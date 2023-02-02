@@ -1,0 +1,17 @@
+.inputBox{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    margin: 2% 0;
+}
+
+input{
+    padding: 1.5%;
+    color: black;
+}
+
+span{
+    color: black;
+    text-shadow: -3px 2px 1px rgb(250, 3, 3);
+    display: none;
+}

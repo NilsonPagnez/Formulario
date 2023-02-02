@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h1>Transformar formulário em PDF</h1>
+        </div>
+
+        <form >
+            <fieldset>
+                 <legend> Preencha o formulário</legend>
+            <div class="inputBox"> 
+                <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+                <input type="text" name="nome" id="nome" class="inputUser required" oninput="validateName()"  >
+                <label for="nome">Nome</label>
+                
+            </div>
+            <div class="inputBox"> 
+                <span class="span-required">E-mail inválido</span>
+                <input type="email" name="email" id="email" class="inputUser required" oninput="emailValidate()" >
+                <label for="email">E-mail</label>
+            </div>
+            <div class="inputBox"> 
+                <input type="tel" name="telefone" id="telefone" class="inputUser" >
+                <label for="telefone">Telefone</label>
+            </div>
+            <div class="inputBox"> 
+                <span class="span-required">CPF inválido</span>
+                <input type="text" name="cpf" id="cpf" class="inputUser required" oninput="cpfValidate()"  >
+                <label for="cpf">CPF</label>
+            </div>
+           
+            <div class="inputBox"> 
+                <span class="span-required"> Selecione uma data</span>
+                <input type="date" name="data de nascimento" id="data_nascimento" class="inputUser required" oninput="dataValidate()" >
+                <label for="data_nascimento">Data de nascimento:</label>
+            </div>
+            <div class="inputBox"> 
+                <span class="span-required">Este espaço não pode estar em branco</span>
+                <input type="text" name="cidade" id="cidade" class="inputUser required" oninput="cidadeValidate()" value=""  >
+                <label for="cidade">Cidade</label>
+            </div>
+            <div class="inputBox "> 
+                <span class="span-required">UF inválido</span>
+                <input type="text" name="uf" id="uf" class="inputUser required" oninput="ufValidate()"  maxlength="2">  
+                <label for="uf">UF</label>
+            </div>
+            <input type="submit" name="submit" id="submit"> 
+            
+            </fieldset>
+        </form>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+</body>
+</html>
